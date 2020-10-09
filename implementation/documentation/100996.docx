@@ -1,1 +1,121 @@
+MINI PROJECT ON 
+BANK MANAGEMENT SYSTEM
+
+Submitted By: Arnab Chakraborty
+Candidate ID: 100996
+
+Table Of Contents:
+
+S.No                 Topics                                           Page
+1.	                 Introduction                                      2        
+2.	                 Aim of the Application                            2
+3.	                 Objectives                                        3
+4.	                 Problem Statement Description                     3
+5.	                 Function Details                                  4
+6.	                 System Requirements                               5
+7.	                 Test Plan                                         5
+8.	                 Test Cases                                        6-7
+9.	                 Research Work                                     8
+10.	                 Conclusion                                        8
+11.	                 References                                        9
+
+
+BANK MANAGEMENT SYSTEM
+
+1. Introduction:
+A bank is an institution which provides financial services that includes issuing of money in the form of notes, services such as debit cards, credit cards, internet banking, lending money, processing transactions and many more. Commercial banks accept deposits from customers and in turn make loans based on those deposits. Many banks provide additional financial services to make additional profit by selling insurance products,stocks etc.
+
+
+2. Aim of the Application:
+The project aims to develop a banking system that is user friendly and at the same time multi-functional. It includes the following functionalities.
+a.	Customers can view their own account details and use them as and when required.
+b.	Customers can make an enquiry about an account along with interest.
+c.	All the account holders have to pass through a login system in order to access their accounts.
+d.	Helps in reducing man power.
+e.	Secure and safe transaction.
+f.	Better and Faster performance.
+
+3. Objectives:
+This application is beneficial for customers intending to use and operate their bank account on a clean and user friendly platform. It is a simple application designed for the bank in order to enter applicant information about their bank accounts and can perform other functions as well.
+Following are the objectives of the system:
+a.	It creates a user friendly environment, where a normal user can access through all the benefits of the system.
+b.	 It provides security from unauthorized access, only authorized users are granted access to the system.
+c.	Saves time thereby increasing efficiency.
+d.	Access to saved data.
+e.	Cost Effective.
+
+
+4. Problem Statement Description:
+The bank management system maintains a person's account in a bank. Here a customer can submit his/her deposit amount if he/she has an account in the bank or they can create a new account as well by providing necessary details. They can view their account status along with account balance. Everytime the customer tries to access their respective bank accounts, he or she has to enter an unique number in order to login to the system. 
+
+
+5. Function Details:
+
+S.No	Function name	Description
+1.	New account	This creates a new account for the user by accepting details such as name,date of birth, a/c number, phone number etc.
+2.	View account	Displays user’s account by accepting account number, and display “No record” if account not found.
+3.	Edit account	Changes in the account in done in terms of Address, Phone number etc., whenever correct account number is given as input.
+4.	Transaction	Deposit amount or withdraw amount(only possible if deposit amount is less than or equal to total balance), upon giving correct account number.
+5.	Delete Record	After entering relevant account number user will have an option to delete the record.
+6.	View account	After making the new account, users can view complete details of their respective accounts.
+7.	Close	Terminates the program
+
+
+6. System Requirements:
+For Hardware:
+a.	Either Pentium or Intel powered systems.
+b.	RAM of 512MB or higher and minimum 10MB of hard disk space.
+For Software:
+a.	Operating System: Windows 98 or higher versions
+b.	Codeblocks or Turbo C with GCC compiler needs to be installed.
+
+7. Test Plan:
+S.No	                  Test Objective
+1.	To check if program menu displays all options.
+2.	To check if account was created or not.
+3.	To check if program adds amount after depositing.
+4.	To verify if program subtracts amount after withdrawing.
+5.	To verify if “View Customer List” works.
+6.	To check if menu opens after entering correct account number.
+7.	To verify if “Record Not found” is shown if incorrect account number is entered.
+8.	To check if exit function is working or not.
+
+
+8. Test Cases:
+
+S.No	Objective	Expected Result	Test Result
+1.	To check if program menu displays all options	All options are to be displayed along with serial number.	Options are displayed in correct order 
+2.	To check if account is created or not.	Bank Account should be present. 	Account no: 123
+Name: Carl
+Type: Savings
+3.	To check if programs adds amount after depositing.	Total balance should increase.	Initial Amount: 15000
+deposit: 2000
+Total: 17000
+4.	To check if programs subtracts amount after withdrawal.	Total balance should decrease.	Initial Amount: 17000
+Withdraw: 5000
+Total: 12000
+5.	To verify if “View Customer List” works.	Should view the complete list of customers who are active bank members.	Complete details are shown.
+6.	To check if menu opens after entering correct account number.	Opens list of options available after entering valid account number.	Account number valid. “Want to continue” ?
+7.	To verify if “Record Not found” is shown if incorrect account number is entered.	Details regarding wrong account number should not be displayed. 	Account No: 3437
+“Record Not Found”.
+8.	To check if exit function is working or not.	Exits the program.	Program terminates.
+
+
+
+9. Research Work:
+The basic idea behind selecting the project was to visualise how the way of functioning and managing the system has totally changed in today’s scenario. With customer interaction increasing day by day, systems are becoming more and more advanced.
+Managing money or any valuable assets is a crucial matter for the service provider as well as the clients. Digitization of bank system not only makes work easy but also significantly improves speed of work. Whenever there is sudden and abrupt change in the structure or maintenance and modification is needed all of a sudden, without a proper managing system the development is incomplete.
+
+10. Conclusion:
+The bank management system is a user friendly system.It is virtualization of transactions in banking system. All manual process are converted into automated process. It needs a user account number, to access user information and only authorised members are allowed access to the system. Every entry that is made to the system is unique, so that important data of the users is not misplaced. With advancements of technology, proper system needs to be present which can aid customers interact with the system seamlessly and at the same time a proper backup of each and every data is maintained whenever there is a failure so that critical information is not lost. 
+
+11. References:
+a.	 Wikipedia: https://en.wikipedia.org/wiki/Bank
+b.	 Turbo C: https://archive.codeplex.com/?p=turboc
+c.	Codeblocks: http://www.codeblocks.org/
+d.	Bank Management System: https://www.researchgate.net/publication/301293322_Bank_Account_Management_System
+e.	http://services.lovelycoding.org/banking-management-system
+f.	http://www.muengineers.in/computer-project-list/visual-basic-projects-list/bank-management-system
+g.	Journal: http://www.ijstr.org/final-print/aug2015/Bank-Customers-Management-System.pdf
+
 
