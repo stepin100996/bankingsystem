@@ -1,0 +1,20 @@
+#Test Plan:
+  To check if program menu displays all options.
+  To check if account was created or not.
+  To check if program adds amount after depositing.
+  To verify if program subtracts amount after withdrawing.
+  To verify if “View Customer List” works.
+  To check if menu opens after entering correct account number.
+  To verify if “Record Not found” is shown if incorrect account number is entered.
+  To check if exit function is working or not.
+ 
+#Test Output:
+
+  To check if program menu displays all options:	All options are to be displayed along with serial number:	Options are displayed in correct order 
+  To check if account is created or not: Bank Account should be present: Account no: 123 Name: Carl Type: Savings
+  To check if programs adds amount after depositing	: Total balance should increase: Initial Amount: 15000 : deposit: 2000: Total: 17000
+  To check if programs subtracts amount after withdrawal: Total balance should decrease: Initial Amount: 17000: Withdraw: 5000: Total: 12000
+  To verify if “View Customer List” works: Should view the complete list of customers who are active bank members: Complete details are shown.
+  To check if menu opens after entering correct account number:	Opens list of options available after entering valid account number:	Account number valid. “Want to continue” ?
+  To verify if “Record Not found” is shown if incorrect account number is entered:	Details regarding wrong account number should not be displayed: 	Account No: 3437: “Record Not Found”.
+  To check if exit function is working or not: 	Exits the program:	Program terminates.
