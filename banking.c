@@ -2,7 +2,7 @@
 #include "banking.h"
 #include<stdlib.h>
 #include<windows.h>
-#include <stdbool.h>
+#include<stdbool.h>
 int i,j;
 int main_exit;
 void menu();
@@ -10,16 +10,15 @@ int atm();
 void close();
 struct date{
     int month,day,year;
-
-    };
+};
 struct {
 
-    char name[60];
+    char name[100];
     int acc_no,age;
-    char address[60];
-    char citizenship[15];
+    char address[100];
+    char citizenship[100];
     double phone;
-    char acc_type[10];
+    char acc_type[100];
     float amt;
     struct date dob;
     struct date deposit;
@@ -32,21 +31,18 @@ float interest(float t,float amount,int rate)
     float SI;
     SI=(rate*t*amount)/100.0;
     return (SI);
-
 }
 void fordelay(int j)
 {   int i,k;
     for(i=0;i<j;i++)
          k=i;
 }
-
 void new_account()
-
 {
     int choice;
     FILE *ptr;
 
-    ptr=fopen("record.dat","a+");
+    ptr=fopen("file1.txt","a+");
     account_no:
     system("cls");
     printf("\t\t\t**** ADD RECORD  ****");
@@ -103,7 +99,7 @@ void new_account()
 void view_info()
 {
     FILE *view;
-    view=fopen("record.dat","r");
+    view=fopen("file1.txt","r");
     int test=0;
     system("cls");
     printf("\nACC. NO.\tNAME\t\t\tADDRESS\t\t\tPHONE\n");
@@ -137,8 +133,8 @@ void edit(void)
 {
     int choice,test=0;
     FILE *old,*newrec;
-    old=fopen("record.dat","r");
-    newrec=fopen("new.dat","w");
+    old=fopen("file1.txt","r");
+    newrec=fopen("file2.txt","w");
 
     printf("\nEnter the account no. of the customer whose information needs to be changed: ");
     scanf("%d",&upd.acc_no);
@@ -171,8 +167,8 @@ void edit(void)
     }
     fclose(old);
     fclose(newrec);
-    remove("record.dat");
-    rename("new.dat","record.dat");
+    remove("file1.txt");
+    rename("file2.txt","file1.txt");
 
 if(test!=1)
         {   system("cls");
@@ -206,8 +202,8 @@ if(test!=1)
 void transact(void)
 {   int choice,test=0;
     FILE *old,*newrec;
-    old=fopen("record.dat","r");
-    newrec=fopen("new.dat","w");
+    old=fopen("file1.txt","r");
+    newrec=fopen("file2.txt","w");
 
         printf("Enter the account no. of the customer:");
     scanf("%d",&transaction.acc_no);
@@ -251,8 +247,8 @@ void transact(void)
    }
    fclose(old);
    fclose(newrec);
-   remove("record.dat");
-   rename("new.dat","record.dat");
+   remove("file1.txt");
+   rename("file2.txt","file1.txt");
    if(test!=1)
    {
        printf("\n\nRecord not found!!");
@@ -289,8 +285,8 @@ void erase(void)
 {
     FILE *old,*newrec;
     int test=0;
-    old=fopen("record.dat","r");
-    newrec=fopen("new.dat","w");
+    old=fopen("file1.txt","r");
+    newrec=fopen("file2.txt","w");
     printf("Enter the account no. of the customer you want to delete:");
     scanf("%d",&rem.acc_no);
     while (fscanf(old,"%d %s %d/%d/%d %d %s %s %lf %s %f %d/%d/%d",&add.acc_no,add.name,&add.dob.month,&add.dob.day,&add.dob.year,&add.age,add.address,add.citizenship,&add.phone,add.acc_type,&add.amt,&add.deposit.month,&add.deposit.day,&add.deposit.year)!=EOF)
@@ -305,8 +301,8 @@ void erase(void)
    }
    fclose(old);
    fclose(newrec);
-   remove("record.dat");
-   rename("new.dat","record.dat");
+   remove("file1.txt");
+   rename("file2.txt","file1.txt");
    if(test==0)
         {
             printf("\nRecord not found!!\a\a\a");
@@ -343,7 +339,7 @@ void see(void)
     int choice;
     float time;
     float intrst;
-    ptr=fopen("record.dat","r");
+    ptr=fopen("file1.txt","r");
     printf("Do you want to check by\n1.Account no\n2.Name\nEnter your choice:");
     scanf("%d",&choice);
     if (choice==1)
@@ -501,7 +497,7 @@ void menu(void)
     system("color 6");
     printf("\n\n\t\t\t        ABC BANK MANAGEMENT SYSTEM");
     printf("\n\n\n\t\t\t\xB3\xB3\xB2\xB2\xB2\xB2\xB2 WELCOME TO THE ABC BANK \xB2\xB2\xB2\xB2\xB2\xB3\xB3");
-    printf("\n\n\t\t<1> Create a new account\n\t\t<2> Update information of existing account\n\t\t<3> Transactions\n\t\t<4> Check the details of existing account\n\t\t<5> Delete existing account\n\t\t<6> View customer details\n\t\t<7> ATM Feature\n\t\t<8> Exit\n\n\n\t\t Enter your choice:");
+    printf("\n\n\t\t<1> Create a new account\n\t\t<2> Update information of existing account\n\t\t<3> Transactions\n\t\t<4> Check the details of existing account\n\t\t<5> Delete existing account\n\t\t<6> View customer details\n\t\t<7> ATM \n\t\t<8> Exit\n\n\n\t\t Enter your choice:");
     scanf("%d",&choice);
 
     system("cls");
@@ -672,19 +668,19 @@ void mainMenu() {
 }
 //balance check...
 void Balcheck(float balance) {
-    printf("Your Available Balance is:   Rs. %.2f\n\n", balance);
+    printf("Your Available Balance is:   Rs %.2f\n\n", balance);
 }
 //deposit amount...
 float Deposit(float balance) {
     float deposit;
-    printf("Your Balance is: Rs. %.2f\n\n", balance);
+    printf("Your Balance is: Rs %.2f\n\n", balance);
     printf("Enter Deposit Amount\n");
     scanf("%f", &deposit);
     
     
     balance += deposit;
     
-    printf("Your New Balance is:   Rs. %.2f\n\n", balance);
+    printf("Your New Balance is:   Rs %.2f\n\n", balance);
     return balance;
 }
 //withdraw amount...
@@ -702,14 +698,15 @@ float Withdraw(float balance) {
     if (withdraw < balance) {
         back = false;
         balance -= withdraw;
-        printf("Withdrawal amount is:  Rs. %.2f\n", withdraw);
-        printf("New Balance is:   Rs. %.2f\n\n", balance);
+        printf("Withdrawal amount is:  Rs %.2f\n", withdraw);
+        printf("New Balance is:   Rs %.2f\n\n", balance);
         
     }
     
         else  {
         
-        printf("Your Balance is:   Rs. %.2f\n\n", balance);
+        printf("\nNot possible!!!");
+        printf("\nYour Balance is:   Rs %.2f\n\n", balance);
     
     }
     }
@@ -721,6 +718,6 @@ void menuExit() {
     
     
 }
-void errorMessage() {;
+void errorMessage() {
     printf("!!!Invalid number!!!\n");
 }
